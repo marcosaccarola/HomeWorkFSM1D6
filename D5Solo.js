@@ -148,14 +148,15 @@ const rollTheDices = function(num) {
 return newValues
     }
        
-    console.log("8", rollTheDices(3))
- 
-
-
+    console.log("8", rollTheDices(4))
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
+const howManyDays = function (date) {
+    return Math.ceil((new Date(date.getTime())-new Date(date.getFullYear(), 0, 1))/86400000)
+}
+  console.log("9", howManyDays(new Date(2020, 02, 16)))
 
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
@@ -349,3 +350,11 @@ const movies = [
         "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     },
   ]
+const olderMovie = function() {
+    let olderMovies 
+    for (let i= 0; i < movies.length; i++) {
+       
+    }
+}
+console.log(olderMovie(movies))
+//Not completed....
