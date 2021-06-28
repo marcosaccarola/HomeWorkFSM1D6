@@ -136,9 +136,21 @@ console.log(whatDayIsIt(05,23,13))
     }
 */ 
 const rollTheDices = function(num) {
- 
+    let newValues = {
+        sum: 0,
+        values: [],
+    }
+    for (let i = 0; i < num; i++) {
+      let temporary = dice() 
+      newValues.sum += temporary
+      newValues.values.push(temporary)  
 }
-console.log(rollTheDices(3))
+return newValues
+    }
+       
+    console.log("8", rollTheDices(3))
+ 
+
 
 
 /* Ex.9
