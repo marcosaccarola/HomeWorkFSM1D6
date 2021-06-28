@@ -16,12 +16,12 @@
    Create a variable called "test" and assign a string to it.
 */
 let test = "Testing"
-console.log("First", test)
+console.log("A", test)
 /* Ex.B
     Create a variable called "sum" and assign to it the result of the sum between 10 and 20.
 */
 let sum = 5 * 3
-console.log("Second", sum)
+console.log("B", sum)
 
 /* Ex.C 
     Create a variable called "random" and assign to it a random number between 0 and 20 (it should be randomly created at each execution).
@@ -29,7 +29,7 @@ console.log("Second", sum)
 const random = function(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
-console.log("Third", random(10, 9))
+console.log("C", random(10, 9))
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
@@ -38,24 +38,24 @@ let me = {
     surname: "Zegnere",
     age: 30,
 }
-console.log("Fourth", me)
+console.log("D", me)
 
 /* Ex.E 
     Programmatically remove the age property from the previously create object.
 */
 delete me["age"]
-console.log("Fifth", me)
+console.log("E", me)
 
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 me.skills = ["Programming", "Design"]
-console.log("Sixth", me)
+console.log("F", me)
 /* Ex.G 
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
 me.skills.pop()
-console.log("Seventh", me)
+console.log("G", me)
 // JS Functions
 /* Ex.1
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
@@ -63,19 +63,37 @@ console.log("Seventh", me)
 const dice = function() {
     return Math.floor(Math.random() * 6) + 1
 }
-console.log("1.", dice())
+console.log("1", dice())
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
+const whoIsBigger = function(num1, num2) {
+    return num1 > num2 ? num1 : num2
+}
+console.log("2", whoIsBigger(1,3))
 
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
+const splitMe = function(string) {
+    return string.split(" ")
+} 
+console.log("3", splitMe("Two different strings"))
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
+const deleteOne = function(string, num) {
+    
+    if (num !== 1) {
+        return string.substring(1)
+    } else {
+        return string.substring(-1)
+    }
+    
+}
+console.log("4", deleteOne("Kikija", 2))
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
