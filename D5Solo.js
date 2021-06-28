@@ -90,8 +90,7 @@ const deleteOne = function(string, num) {
         return string.substring(1)
     } else {
         return string.substring(-1)
-    }
-    
+    }   
 }
 console.log("4", deleteOne("Kikija", 2))
 
@@ -99,10 +98,25 @@ console.log("4", deleteOne("Kikija", 2))
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
+const onlyLetters = function(string) {
+    return string.replace(/[0-9]/g, '')
+}
+console.log("5", onlyLetters("Today was 35 degrees"))
 
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+const isThisAnEmail = function(email) {
+
+    let validLetters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+  
+    if (email.match(validLetters)) { 
+      return true
+    } else {
+     return false
+    } 
+  }
+  console.log(isThisAnEmail("kristinezegnere1@gmail.com"))
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
