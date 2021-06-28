@@ -86,11 +86,8 @@ console.log("3", splitMe("Two different strings"))
 */
 const deleteOne = function(string, num) {
     
-    if (num !== 1) {
-        return string.substring(1)
-    } else {
-        return string.substring(-1)
-    }   
+    return num !== 1 ? string.substring(1) : string.substring(-1)
+     
 }
 console.log("4", deleteOne("Kikija", 2))
 
@@ -121,6 +118,12 @@ const isThisAnEmail = function(email) {
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
+const whatDayIsIt = function(today) {
+    let newDate = new Date()
+    let thisDay2 = newDate.getDay()
+    return thisDay2
+}
+console.log(whatDayIsIt(05,23,13))
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -131,7 +134,12 @@ const isThisAnEmail = function(email) {
         sum: 10
         values: [3, 3, 4]
     }
-*/
+*/ 
+const rollTheDices = function(num) {
+ 
+}
+console.log(rollTheDices(3))
+
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
@@ -140,7 +148,11 @@ const isThisAnEmail = function(email) {
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-
+const isTodayIsMyBirthday = function(givendate) {
+    let myBirthday = 06/02/91
+    return givendate === myBirthday ? true : false  
+}
+console.log("10",isTodayIsMyBirthday(06/02/91))
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
