@@ -30,6 +30,10 @@ const random = function(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
 console.log("C", random(10, 9))
+
+var random2=(Math.floor(Math.random()*20)+1)
+console.log("C in Marco's way", random2)
+
 /* Ex.D
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
